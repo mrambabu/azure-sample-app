@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - sampledotnetapplicati
 on:
   push:
     branches:
-      - master
+      - Development
   workflow_dispatch:
 
 jobs:
@@ -52,6 +52,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'sampledotnetapplication'
-          slot-name: 'Production'
+          slot-name: 'Dev/Test'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E14CB40F7CE148ACB114418C6DD6A7A5 }}
           package: .
