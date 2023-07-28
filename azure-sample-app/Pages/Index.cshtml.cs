@@ -15,7 +15,7 @@ namespace azure_sample_app.Pages
 
         public void OnGet()
         {
-            ViewData["Greetings"] = _configuration["Greetings"];
+            ViewData["Greetingsstaging"] = _configuration["Greetingsstaging"];
 
         }
     }
